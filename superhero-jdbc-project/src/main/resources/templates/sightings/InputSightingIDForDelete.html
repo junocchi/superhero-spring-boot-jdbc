@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/location.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero Sightings</h1>
+	<hr>
+	<h2> Delete a Sighting </h2>
+	<hr>
+	
+	<form action="./delete-sighting">
+		Enter Sighting ID : <input type="text" name="sightingId"><br><br>
+		<input type="submit" value="Delete Sighting">
+		
+	</form>
+	
+	<br><br>
+	<a href="/sightings">Go to Main Page</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/location.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero sighting</h1>
+	<hr>
+	<h2> Update a location's description</h2>
+	<hr>
+	<form action="/location/updateLocationDescription">
+		Enter Location ID : <input type="text" name="locationId"><br>
+		<br> Enter new Description : <input type="text" name="description"><br>
+		<br> <input type="submit" value="Update Description">
+	</form>
+	<br><br>
+	<a href="/location/LocationMenu">Back</a>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Display All Superheroes</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link th:href="@{/styles/Superheroes.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div id="page-name">
+			<h1>Superheroes Application</h1>
+		</div>
+
+	</header>
+	<div id="content">
+		<div id="nav">
+			<h2>Display All Superheroes</h2>
+			<table border="1">
+				<tr>
+					<th>Superhero ID</th>
+					<th>Superhero Name</th>
+					<th>Superhero Description</th>
+					<th>Superhero Superpower</th>
+				</tr>
+				<tr th:each="superhero : ${superheroList}">
+					<td th:text="${superhero.superheroId}"></td>
+					<td th:text="${superhero.superheroName}"></td>
+					<td th:text="${superhero.superheroDescription}"></td>
+					<td th:text="${superhero.superheroSuperpower}"></td>
+				</tr>
+			</table>
+
+			<button id="return-superheroes-menu">
+				<a href="/superheroes">
+					<p class="material-symbols-outlined">arrow_back</p>
+					<p id="return-text">Return to Superheroes Menu</p>
+				</a>
+			</button>
+		</div>
+	</div>
+</body>
+</html>

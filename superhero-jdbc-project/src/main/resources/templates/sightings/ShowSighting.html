@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/location.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero Sightings</h1>
+	<hr>
+	<h2> Search Sighting by ID </h2>
+	<hr>
+	<table border="1">
+		<tr>
+			<th>Sighting ID</th>
+			<th>Superhero ID</th>
+			<th>Location ID</th>
+			<th>Sighting Date</th>
+		</tr>
+		<tr>
+			<td th:text="${sighting.sightingId}"></td>
+			<td th:text="${sighting.superheroId}"></td>
+			<td th:text="${sighting.locationId}"></td>
+			<td th:text="${sighting.sightingDate}"></td>
+		<tr>
+	</table>
+	<br>
+	<br>
+	<a href="/sighting">Go to Main Page</a>
+	<br>
+	<br>
+	<a href="./">Search for Another Sighting</a>
+</body>
+</html>

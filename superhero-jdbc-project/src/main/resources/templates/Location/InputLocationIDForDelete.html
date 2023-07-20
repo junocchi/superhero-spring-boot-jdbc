@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/location.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero Sightings</h1>
+	<hr>
+	<h2> Delete a Location </h2>
+	<hr>
+	<form action="./deleteLocation">
+		Enter DVD ID : <input type="text" name="locationId"><br><br>
+		<input type="submit" value="Delete Location">
+		
+	</form>
+	<br><br>
+	<a href="/location/LocationMenu">Back</a>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Delete Superhero By ID</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link th:href="@{/styles/Superheroes.css}" rel="stylesheet">
+
+</head>
+
+
+<body>
+	<header>
+		<div id="page-name">
+			<h1>Superheroes Application</h1>
+		</div>
+
+	</header>
+	<div id="content">
+		<div id="nav">
+			<h2>Update Superhero's details</h2>
+			<hr>
+			<table>
+				<caption>Here is the Superhero we found:</caption>
+				<tr>
+					<th>Superhero ID</th>
+					<th>Superhero Name</th>
+					<th>Superhero Description</th>
+					<th>Superhero Superpower</th>
+
+				</tr>
+				<tr>
+					<td th:text="${superhero.superheroId}"></td>
+					<td th:text="${superhero.superheroName}"></td>
+					<td th:text="${superhero.superheroDescription}"></td>
+					<td th:text="${superhero.superheroSuperpower}"></td>
+				</tr>
+			</table>
+			<br> <br>
+			<form th:action="@{/superheroes/update-superhero-details}"
+				th:object="${newSuperhero}" method="post">
+				<br> Superhero ID: <input type="text" th:field="*{superheroId}"
+					value="${superhero.superheroId}" readonly><br> <br>
+				Enter Superhero's ID: <input type="text" th:field="*{superheroId}"
+					required value="${superhero.superheroId}"><br> <br>
+				Enter Superhero's Name: <input type="text"
+					th:field="*{superheroName}" required
+					value="${superhero.superheroName}"><br> <br>
+				Enter Superhero's Description: <input type="text"
+					th:field="*{superheroDescription}" required
+					value="${superhero.superheroDescription}"><br> <br>
+				Enter Superhero' Superpower: <input type="text"
+					th:field="*{superheroSuperpower}" required
+					value="${superhero.superheroSuperpower}"> <br> <input
+					type="submit" value="Update Superhero's Information">
+			</form>
+
+			<br> <br>
+			<button id="return-superheroes-menu">
+				<a href="/superheroes">
+					<p class="material-symbols-outlined">arrow_back</p>
+					<p id="return-text">Return to Superheroes Menu</p>
+				</a>
+			</button>
+		</div>
+	</div>
+</body>
+</html>

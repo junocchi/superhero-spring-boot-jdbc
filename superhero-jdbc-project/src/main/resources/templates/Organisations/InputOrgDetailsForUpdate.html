@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/location.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero sighting</h1>
+	<hr>
+	<h2> Update an organisation's details here</h2>
+	<hr>
+<form action="/updateOrgDetails">
+    Enter Organisation ID: <input type="text" name="organisationId" required><br><br>
+    Enter new Organisation Name: <input type="text" name="orgName" required><br><br>
+    Enter new Organisation Description: <input type="text" name="orgDescription" required><br><br>
+    Enter new Organisation Information: <input type="text" name="orgInfo" required><br><br>
+    <input type="submit" value="Save new Details">
+</form>
+<br>
+	<br>
+	<a href="/organisations">Go To Organisations Menu</a>
+</body>
+</html>

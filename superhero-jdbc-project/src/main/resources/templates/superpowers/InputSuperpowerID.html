@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/main.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero Sightings</h1>
+	<hr>
+	<h2> Edit the Details of a Superpower </h2>
+	<hr>
+	<form action="./search-superpower">
+		Enter Superpower ID :<input type="text" name="id"><br>
+		<br> <input type="submit" value="Search Superpower">
+	</form>
+	<br>
+	<br>
+	<a href="/superpowers/">Go to superpowers menu</a>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/location.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero Sightings</h1>
+	<hr>
+	<h2> Search Location by ID </h2>
+	<hr>
+	<table id = "table" border="1">
+		<tr>
+			<th>Location ID</th>
+			<th>Location Name</th>
+			<th>Location Description</th>
+			<th>Address</th>
+			<th>Coordinates</th>
+		</tr>
+		<tr>
+			<td th:text="${Location.locationId}"></td>
+			<td th:text="${Location.locationName}"></td>
+			<td th:text="${Location.locationDescription}"></td>
+			<td th:text="${Location.address}"></td>
+			<td th:text="${Location.coordinates}"></td>
+		<tr>
+	</table>
+	<br>
+	<br>
+	<a href="/location/LocationMenu">Back</a>
+	<br>
+	<br>
+	<a href="/location/InputLocationID">Search for Another Location</a>
+</body>
+</html>

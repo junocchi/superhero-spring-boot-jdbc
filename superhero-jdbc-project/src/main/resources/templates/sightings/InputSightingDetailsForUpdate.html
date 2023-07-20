@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/location.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero sighting</h1>
+	<hr>
+	<h2> Update a sighting's details</h2>
+	<hr>
+	
+	<table>
+	<caption> Here is the sighting we found:</caption>
+		<tr>
+			<th>Sighting ID</th>
+			<th>Superhero ID</th>
+			<th>Location ID</th>
+			<th>Sighting Date</th>
+		
+		</tr>
+		<tr>
+			<td th:text="${sighting.sightingId}"></td>
+			<td th:text="${sighting.superheroId}"></td>
+			<td th:text="${sighting.locationId}"></td>
+			<td th:text="${sighting.sightingDate}"></td>
+		</tr>
+	</table>
+	<br><br>
+	<form th:action="@{/sightings/update-sighting-details}" th:object="${newSighting}" method="post">
+		<br> Sighting ID : <input type="text" th:field="*{sightingId}" value="${sighting.sightingId}" readonly><br>
+		<br> Enter Superhero ID : <input type="text" th:field="*{superheroId}" required value="${sighting.superheroId}"><br>
+		<br> Enter Location ID : <input type="text" th:field="*{locationId}" required value="${sighting.locationId}"><br>
+		<br> Pick the Date : <input type="text" th:field="*{sightingDate}" required value="${sighting.sightingDate}">
+		<br> <input type="submit" value="Update Description">
+	</form>
+	<br><br>
+	<a href="sightings/">Go to Main Page</a>
+</body>
+</html>

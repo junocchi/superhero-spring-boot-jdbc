@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/location.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero Sightings</h1>
+	<hr>
+	<h2> Here are all the Organisations we have registered on the system </h2>
+	<hr>
+	<table border="1">
+		<tr>
+			<th>Organisation ID</th>
+			<th>Organisation Name</th>
+			<th>Description</th>
+			<th>Organisation Information</th>
+		</tr>
+		<tr th:each="organisation : ${organisationList}">
+			<td th:text="${organisation.organisationId}"></td>
+			<td th:text="${organisation.orgName}"></td>
+			<td th:text="${organisation.orgDescription}"></td>
+			<td th:text="${organisation.orgInfo}"></td>
+			
+		</tr>
+	</table>
+	<br><br>
+	<a href="/organisations">Go To Organisations Menu</a>
+</body>
+</html>

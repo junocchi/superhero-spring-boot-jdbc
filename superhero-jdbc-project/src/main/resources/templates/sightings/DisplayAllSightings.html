@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>All Sightings</title>
+<style>
+	body {
+	max-width: 1200px;
+    margin: 5px auto;
+    font-family: arial, helvetica, sans-serif;
+	}
+
+	header {
+	background-color: grey;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	}
+	
+	#page-name {
+	width: 90%;
+	}
+	
+	#description {
+	width: 90%;
+	}
+	
+	h1 {
+	text-align: center;
+	}
+	
+	#content {
+	background-color: green;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	}
+	
+	#nav {
+	width: 40%;
+	padding: 4px;
+	min-width: 200px;
+	}
+	
+	button {
+	background-color: yellow;
+	transition-duration: 0.4s;
+  	cursor: pointer;
+  	border-radius: 4px;
+  	width: 90%;
+  	padding: 4px;
+  	text-align: left;
+  	font-size: 15px;
+  	margin: 2px;
+	}
+	
+	button:hover {
+	background-color: orange;
+	}
+	
+	table {
+	border: 1px solid;
+	width: 100%;
+	background-color: yellow;
+	margin: 5px;
+	}
+	
+	th, td {
+	border: 1px solid;
+	}
+	
+	#sightings {
+	width: 65%;
+	min-width: 600px;
+	}
+	
+	a {
+	text-decoration: none;
+	}
+	
+	#return-menu {
+	vertical-align: middle;
+	}
+	
+	#return-text {
+	display: inline; 
+	vertical-align: middle;
+	}
+	
+	.material-symbols-outlined {
+	display: inline; 
+	vertical-align: middle;
+	}
+	
+	caption {
+	font-size: 1.5em;
+	text-align: left;
+	margin: 5px;
+	}
+	
+	</style>
+</head>
+<body>
+<header>
+		<div id="page-name">
+			<h1>Superhero Sighting Application</h1>
+		</div>
+
+</header>
+<div id="sightings">	
+	<table>
+	<caption> Here are all the sightings we have registered on the system</caption>
+		<tr>
+			<th>Sighting ID</th>
+			<th>Superhero ID</th>
+			<th>Location ID</th>
+			<th>Sighting Date</th>
+		
+		</tr>
+		<tr th:each="sighting : ${sightingList}">
+			<td th:text="${sighting.sightingId}"></td>
+			<td th:text="${sighting.superheroId}"></td>
+			<td th:text="${sighting.locationId}"></td>
+			<td th:text="${sighting.sightingDate}"></td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<a href="/sightings">Go To Main Page</a>
+</div>
+</body>
+</html>
