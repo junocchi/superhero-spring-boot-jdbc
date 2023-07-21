@@ -1,6 +1,10 @@
 # superhero-java
 A Superhero sightings web application, developed as part of a group of four junior developers.
 
+<img height="200" src="./src/images/diagram.png"> 
+
+<img height="1000" src="./src/images/example-superhero.png"> 
+
 ## Tech
 - Java Spring Boot with JDBC Template
 - HTML
@@ -26,3 +30,5 @@ The system reports all of the locations where a particular superhero has been se
 The system reports all sightings (hero and location) for a particular date.
 The system reports all of the members of a particular organisation.
 The system reports all of the organisations a particular superhero belongs to.
+
+
