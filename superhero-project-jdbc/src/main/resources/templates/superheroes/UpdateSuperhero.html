@@ -16,34 +16,31 @@
 		</div>
 
 	</header>
-<div id="content">
+	<div id="content">
 		<div id="nav">
 			<div id="nav">
-			<h2>Enter the new superhero's details</h2>
-			<hr>
-			<form action="#" th:action="@{./add-superhero}"
-				th:object="${superhero}" method="post">
-				Enter Superhero ID : <input type="text" th:field="*{superheroId}"
-					required><br> <br> 
-				Enter Superhero Name : <input
-					type="text" th:field="*{superheroName}" required><br> <br>
-				Enter Superhero Description : <input type="text"
-					th:field="*{superheroDescription}" required><br> <br>
-				Enter Superhero Superpower : <input type="text" th:field="*{superheroSuperpower}"
-					required><br> <br>
-				<input type="submit" value="Add Superhero">
-			</form>
+				<h2>Enter the new superhero's details</h2>
+				<hr>
+				<form action="#" th:action="@{./add-superhero}"
+					th:object="${superhero}" method="post">
+					Enter Superhero ID : <input type="text" th:field="*{superheroId}"
+						required><br> <br> Enter Superhero Name : <input
+						type="text" th:field="*{superheroName}" required><br>
+					<br> Enter Superhero Description : <input type="text"
+						th:field="*{superheroDescription}" required><br> <br>
+					Enter Superhero Superpower : <input type="text"
+						th:field="*{superheroSuperpower}" required><br> <br>
+					<input type="submit" value="Add Superhero">
+				</form>
 
-			<br> <br>
-			<button id="return-superheroes-menu"><a href="/superheroes">
-				<p class="material-symbols-outlined">
-					arrow_back
-				</p>
-				<p id="return-text">
-				 	Return to Superheroes Menu
-				</p>
-			</a></button>
+				<br> <br>
+				<button id="return-superheroes-menu">
+					<a href="/superheroes">
+						<p class="material-symbols-outlined">arrow_back</p>
+						<p id="return-text">Return to Superheroes Menu</p>
+					</a>
+				</button>
+			</div>
 		</div>
-	</div>
 </body>
 </html>

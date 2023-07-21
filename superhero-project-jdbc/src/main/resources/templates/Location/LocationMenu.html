@@ -1,101 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Template</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<meta charset="ISO-8859-1">
+<title>Template</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-	<style>
-	body {
+<style>
+body {
 	max-width: 1200px;
-    margin: 5px auto;
-    font-family: arial, helvetica, sans-serif;
-    background-color: #2a9d8e;
-    margin-left: 25%;
-    margin-right:25%;
-    
-   
-	}
+	margin: 5px auto;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #2a9d8e;
+	margin-left: 25%;
+	margin-right: 25%;
+}
 
-	header {
+header {
 	background-color: #e66f51;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	}
-	
-	#page-name {
+}
+
+#page-name {
 	width: 90%;
-	}
-	
-	#description {
+}
+
+#description {
 	width: 90%;
-	}
-	
-	h1 {
+}
+
+h1 {
 	text-align: center;
-	}
-	
-	h2 {
+}
+
+h2 {
 	text-align: center;
-	}
-	
-	#content {
+}
+
+#content {
 	background-color: #e9c46b;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	}
-	
-	#nav {
+}
+
+#nav {
 	width: 40%;
 	padding: 4px;
 	min-width: 200px;
-	}
-	
-	button {
+}
+
+button {
 	background-color: #f3a261;
 	transition-duration: 0.4s;
-  	cursor: pointer;
-  	border-radius: 4px;
-  	width: 90%;
-  	padding: 4px;
-  	text-align: left;
-  	font-size: 15px;
-  	margin: 2px;
-	}
-	
-	button:hover {
+	cursor: pointer;
+	border-radius: 4px;
+	width: 90%;
+	padding: 4px;
+	text-align: left;
+	font-size: 15px;
+	margin: 2px;
+}
+
+button:hover {
 	background-color: orange;
-	}
-	
-	#sightings {
+}
+
+#sightings {
 	width: 65%;
 	min-width: 600px;
-	}
-	
-	a {
+}
+
+a {
 	text-decoration: none;
-	}
-	
-	#return-menu {
+}
+
+#return-menu {
 	vertical-align: middle;
-	}
-	
-	#return-text {
-	display: inline; 
+}
+
+#return-text {
+	display: inline;
 	vertical-align: middle;
-	}
-	
-	.material-symbols-outlined {
-	display: inline; 
+}
+
+.material-symbols-outlined {
+	display: inline;
 	vertical-align: middle;
-	}
-	
-	</style>
-	
+}
+</style>
+
 </head>
 
 <body>
@@ -105,27 +103,38 @@
 		</div>
 
 	</header>
-	
+
 	<div id="content">
 		<div id="nav">
-			<h2> Location Menu </h2>
-			<button><a href="/location/input-location-details">Add a  New Location</a></button>
-			<button><a href="/location/display-all-locations">View All Locations </a></button>
-			<button><a href="/location/input-location-details-for-update">Edit a Location's Description</a></button>
-			<button><a href="/location/input-location-ID-for-delete">Delete a Location</a></button>
-			<button><a href="/location/input-location-ID">Search for a Location by its ID</a></button>
-			
-			<button id="return-menu"><a href="/Home">
-				<p class="material-symbols-outlined">
-					arrow_back
-				</p>
-				<p id="return-text">
-				 	Return to Main Menu
-				</p>
-			</a></button>
+			<h2>Location Menu</h2>
+			<button>
+				<a href="/location/input-location-details">Add a New Location</a>
+			</button>
+			<button>
+				<a href="/location/display-all-locations">View All Locations </a>
+			</button>
+			<button>
+				<a href="/location/input-location-details-for-update">Edit a
+					Location's Description</a>
+			</button>
+			<button>
+				<a href="/location/input-location-ID-for-delete">Delete a
+					Location</a>
+			</button>
+			<button>
+				<a href="/location/input-location-ID">Search for a Location by
+					its ID</a>
+			</button>
+
+			<button id="return-menu">
+				<a href="/Home">
+					<p class="material-symbols-outlined">arrow_back</p>
+					<p id="return-text">Return to Main Menu</p>
+				</a>
+			</button>
 		</div>
 	</div>
-	
+
 </body>
 </html>
 
