@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>All Sightings</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link th:href="@{/styles/Superheroes.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div id="page-name">
+			<h1>Superhero Sighting Application</h1>
+			</div>
+	</header>
+	<div id="content">
+		<div id="nav">
+			<h2>Here are all the sightings we have registered on the system</h2>
+			<table id="table" border="1">
+
+				<tr>
+					<th>Sighting ID</th>
+					<th>Superhero ID</th>
+					<th>Location ID</th>
+					<th>Sighting Date</th>
+
+				</tr>
+				<tr th:each="sighting : ${sightingList}">
+					<td th:text="${sighting.sightingId}"></td>
+					<td th:text="${sighting.superheroId}"></td>
+					<td th:text="${sighting.locationId}"></td>
+					<td th:text="${sighting.sightingDate}"></td>
+				</tr>
+			</table>
+
+			<button id="return-superheroes-menu">
+				<a href="/sightings">
+					<p class="material-symbols-outlined"></p>
+					<p id="return-text">Return to Sightings Menu</p>
+				</a>
+			</button>
+		</div>
+	</div>
+</body>
+</html>

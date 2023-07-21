@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link th:href="@{/styles/Superheroes.css}" rel="stylesheet">
+</head>
+</head>
+<body>
+	<h1>SuperHero Sightings</h1>
+	<hr>
+	<h2> Got a superpower to add? Enter the new superpower's details </h2>
+	<hr>
+	<form action="#" th:action="@{/superpowers/save-superpower}" th:object="${power}" method="post">
+		Enter Superpower ID : <input type="text" th:field="*{superpowerId}"><br><br>
+		Enter Superpower Name : <input type="text" th:field="*{superpowerName}"><br><br>
+		Enter Superhero ID : <input type="text" th:field="*{superheroId}"><br><br>
+		<input type="submit" value="Save Superpower">
+	</form>
+
+	<br><br>
+	<button id="return-superheroes-menu">
+		<a href="/superpowers">
+			<p class="material-symbols-outlined"></p>
+			<p id="return-text">Return to Superpowers Menu</p>
+		</a>
+	</button>
+</body>
+</html>
