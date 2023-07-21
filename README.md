@@ -31,4 +31,7 @@ The system reports all sightings (hero and location) for a particular date.
 The system reports all of the members of a particular organisation.
 The system reports all of the organisations a particular superhero belongs to.
 
-
+# TDD
+By prioritizing TDD, we ensured the reliability and stability of our application, instilling confidence in our team and stakeholders. Below is an example of the test cases we wrote for Superheroes: 
+<br/><br/>
+<img height="300" src="./src/images/superheroes-tests.png"> 
