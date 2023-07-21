@@ -1,5 +1,6 @@
 package com.model.persistence;
 
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,8 @@ public class SightingDaoImpl implements SightingDao {
 		} catch (DataIntegrityViolationException ex) {
 			return null;
 		} catch (IndexOutOfBoundsException ex) {
+			return null;
+		} catch (Exception ex) {
 			return null;
 		}
 	}

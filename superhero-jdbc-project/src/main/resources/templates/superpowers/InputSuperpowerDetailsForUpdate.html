@@ -19,16 +19,16 @@
 			<th>Superhero ID</th>
 		</tr>
 		<tr>
-			<td th:text="${superpower.sightingId}"></td>
+			<td th:text="${superpower.superpowerId}"></td>
 			<td th:text="${superpower.superpowerName}"></td>
 			<td th:text="${superpower.superheroId}"></td>
 		</tr>
 	</table>
 	<br><br>
 	<form th:action="@{/superpowers/update-superpower-details}" th:object="${newSuperpower}" method="post">
-		<br> Superpower ID : <input type="text" th:field="*{sightingId}" value="${sighting.sightingId}" readonly><br>
-		<br> Enter Superpower Name : <input type="text" th:field="*{superheroId}" required value="${sighting.superheroId}"><br>
-		<br> Enter Superhero ID : <input type="text" th:field="*{locationId}" required value="${sighting.locationId}"><br>
+		<br> Superpower ID : <input type="text" th:field="*{superpowerId}" value="${superpower.superpowerId}" readonly><br>
+		<br> Enter Superpower Name : <input type="text" th:field="*{superpowerName}" required value="${superpower.superpowerName}"><br>
+		<br> Enter Superhero ID : <input type="text" th:field="*{superheroId}" required value="${superpower.superheroId}"><br>
 		<br> <input type="submit" value="Update Superpower">
 	</form>
 	<br><br>

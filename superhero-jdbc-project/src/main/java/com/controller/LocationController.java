@@ -31,17 +31,17 @@ public class LocationController {
 	}
 
 
-	@RequestMapping("/location/LocationMenu")
+	@RequestMapping("/location")
 	public ModelAndView LocationMenuController() {
 		return new ModelAndView("/location/LocationMenu");
 	}
 
-	@RequestMapping("/location/InputLocationID")
+	@RequestMapping("/location/input-location-ID")
 	public ModelAndView InputLocationIdPageController() {
 		return new ModelAndView("/location/InputLocationID");
 	}
 
-	@RequestMapping("/location/searchLocationById")
+	@RequestMapping("/location/search-location-by-ID")
 	public ModelAndView searchLocationByIdController(@RequestParam("locationId") int id) {
 		ModelAndView modelAndView = new ModelAndView();
 		Location location = service.getLocationById(id);
@@ -64,7 +64,7 @@ public class LocationController {
 	
 	
 	
-	@RequestMapping("/location/InputLocationDetails")
+	@RequestMapping("/location/input-location-details")
 	public ModelAndView InputLocationDetailsPageController() {
 		ModelAndView modelAndView=new ModelAndView();
 		
@@ -75,7 +75,7 @@ public class LocationController {
 	}
 	
 
-	@RequestMapping("/location/DisplayAllLocations")
+	@RequestMapping("/location/display-all-locations")
 	public ModelAndView showAllLocationsController() {
 		ModelAndView modelAndView = new ModelAndView();
 
@@ -85,7 +85,7 @@ public class LocationController {
 		return modelAndView;
 	}
 
-	@RequestMapping("/location/saveLocation")
+	@RequestMapping("/location/save-location")
 	public ModelAndView saveLocationController(@ModelAttribute("location") Location location) {
 		ModelAndView modelAndView = new ModelAndView();
 	
@@ -94,7 +94,7 @@ public class LocationController {
 		if (service.addLocation(location) == 1)
 			message = "Location Added";
 		else
-			message = "Location Not Added";
+			message = "Location Not Added, Location with ID: " + location.getLocationId() + " already exits";
 
 		modelAndView.addObject("message", message);
 		modelAndView.setViewName("/location/Output");
@@ -102,12 +102,12 @@ public class LocationController {
 		return modelAndView;
 	}
 
-	@RequestMapping("/location/InputLocationIDForDelete")
+	@RequestMapping("/location/input-location-ID-for-delete")
 	public ModelAndView inputLocationIdPageForDeleteController() {
 		return new ModelAndView("/location/InputLocationIDForDelete");
 	}
 
-	@RequestMapping("/location/deleteLocation")
+	@RequestMapping("/location/delete-location")
 	public ModelAndView deleteLocationController(@RequestParam("locationId") int id) {
 		ModelAndView modelAndView = new ModelAndView();
 		String message = null;
@@ -122,13 +122,13 @@ public class LocationController {
 		return modelAndView;
 	}
 	
-	@RequestMapping("/location/InputLocationDetailsForUpdate")
+	@RequestMapping("/location/input-location-details-for-update")
 	public ModelAndView InputLocationDetailsPageForUpdateController(){
 		return new ModelAndView("/location/InputLocationDetailsForUpdate");
 	}
 	
 	
-	@RequestMapping("/location/updateLocationDescription")
+	@RequestMapping("/location/update-location-description")
 	public ModelAndView updateLocationDescriptionController(@RequestParam("locationId") int locationId,@RequestParam("description") String description) {
 		
 		String message=null;

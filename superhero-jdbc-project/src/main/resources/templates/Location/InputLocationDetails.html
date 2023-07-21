@@ -10,7 +10,7 @@
 	<hr>
 	<h2> Got a Location to submit? Enter the new location's details></h2>
 	<hr>
-	<form action="#" th:action="@{/location/saveLocation}" th:object="${location}"
+	<form action="#" th:action="@{/location/save-location}" th:object="${location}"
 		method="post">
 		Enter Location ID : <input type="text" th:field="*{locationId}" required><br>
 		<br> Enter Location  Name : <input type="text" th:field="*{locationName}" required><br>
@@ -22,6 +22,6 @@
 	
 	<br>
 	<br>
-	<a href="/location/LocationMenu">Back</a>
+	<a href="/location/location-menu">Back</a>
 </body>
 </html>

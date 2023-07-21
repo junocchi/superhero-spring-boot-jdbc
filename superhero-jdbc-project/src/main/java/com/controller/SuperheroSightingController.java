@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dto.entity.Sighting;
@@ -16,11 +17,12 @@ import com.dto.entity.Superhero;
 import com.dto.entity.Superpower;
 import com.model.service.SuperpowerServiceImp;
 
+@RestController
 public class SuperheroSightingController {
 	@Autowired
 	private SuperpowerServiceImp service;
 	
-	@RequestMapping("superpowers/input-superpower-id")
+	@RequestMapping("superpowers/input-superpower-id-for-update")
 	public ModelAndView enterSuperpowerId() {
 		return new ModelAndView("superpowers/InputSuperpowerID.html");
 	}
@@ -40,7 +42,7 @@ public class SuperheroSightingController {
 			modelAndView.setViewName("superpowers/InputSuperpowerDetailsForUpdate");
 		} else {
 			modelAndView.addObject("message", "Superpower with ID " + id + " does not exist.");
-			modelAndView.setViewName("sightings/Output.html");
+			modelAndView.setViewName("superpowers/Output.html");
 		}
 		return modelAndView;
 	}
@@ -51,10 +53,10 @@ public class SuperheroSightingController {
 		
 		if (service.updateSuperpower(newSuperpower)) {
 			modelAndView.addObject("message", "Superpower has been updated.");
-			modelAndView.setViewName("sightings/Output.html");
+			modelAndView.setViewName("superpowers/Output.html");
 		} else {
 			modelAndView.addObject("message", "Superpower could not be updated.");
-			modelAndView.setViewName("sightings/Output.html");
+			modelAndView.setViewName("superpowers/Output.html");
 		}
 		
 		return modelAndView;

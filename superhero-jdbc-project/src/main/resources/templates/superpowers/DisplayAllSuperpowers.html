@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/superheroes.css}" rel="stylesheet">
+</head>
+<body>
+	<h1>SuperHero Sightings</h1>
+	<hr>
+	<h2> Here are all the SuperPowers we have registered on the system</h2>
+	<hr>
+	<table id = "table" border="1">
+		<tr>
+			<th>SuperPower ID</th>
+			<th>SuperPower Name</th>
+			<th>SuperHero ID</th>
+			
+		</tr>
+		<tr th:each="superpower : ${superpowerList}">
+			<td th:text="${superpower.superpowerId}"></td>
+			<td th:text="${superpower.superpowerName}"></td>
+			<td th:text="${superpower.superheroId}"></td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<a href="/superpowers">Back</a>
+</body>
+</html>
