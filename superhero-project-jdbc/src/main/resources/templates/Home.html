@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Template</title>
-	
-	<style>
-	body {
+<meta charset="ISO-8859-1">
+<title>Template</title>
+
+<style>
+body {
 	max-width: 1200px;
-    margin: 5px auto;
-    font-family: arial, helvetica, sans-serif;
+	margin: 5px auto;
+	font-family: arial, helvetica, sans-serif;
 	color: midnightblue;
 	background-color: lightsteelblue;
-	}
+}
 
-	header {
+header {
 	background-color: lightsteelblue;
 	width: 100%;
 	display: flex;
@@ -21,77 +21,76 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	}
-	
-	#page-name {
+}
+
+#page-name {
 	width: 90%;
-	}
-	
-	#description {
+}
+
+#description {
 	width: 90%;
-	}
-	
-	h1 {
+}
+
+h1 {
 	text-align: center;
-	}
-	
-	#content {
+}
+
+#content {
 	background-color: mediumaquamarine;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	}
-	
-	#nav {
+}
+
+#nav {
 	width: 30%;
 	padding: 4px;
 	min-width: 200px;
-	}
-	
-	button {
+}
+
+button {
 	background-color: plum;
 	transition-duration: 0.4s;
-  	cursor: pointer;
-  	border-radius: 4px;
-  	width: 90%;
-  	padding: 4px;
-  	text-align: left;
-  	font-size: 15px;
-  	margin: 2px;
-	}
-	
-	button:hover {
+	cursor: pointer;
+	border-radius: 4px;
+	width: 90%;
+	padding: 4px;
+	text-align: left;
+	font-size: 15px;
+	margin: 2px;
+}
+
+button:hover {
 	background-color: mediumorchid;
-	}
-	
-	#sightings {
+}
+
+#sightings {
 	width: 65%;
 	min-width: 600px;
-	}
-	
-	a {
+}
+
+a {
 	text-decoration: none;
-	}
-	
-	table {
-	border: 1rgb(254, 252, 120)id;
+}
+
+table {
+	border: 1rgb(254, 252, 120) id;
 	width: 100%;
 	background-color: #f8fb98;
 	margin: 5px;
-	}
-	
-	th, td {
+}
+
+th, td {
 	border: 1px solid;
-	}
-	
-	caption {
+}
+
+caption {
 	font-size: 1.5em;
 	text-align: left;
 	margin: 5px;
-	}
-	
-	</style>
-	
+}
+</style>
+
 </head>
 
 <body>
@@ -100,22 +99,37 @@
 			<h1>Superhero Sighting Application</h1>
 		</div>
 		<div id="description">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>The Superhero Sightings web application is an exciting and
+				innovative platform that allows users to report and track sightings
+				of their favorite superheroes in various locations. Designed for
+				superhero enthusiasts, comic book fans, and curious citizens alike,
+				this application provides a thrilling experience for those who wish
+				to engage with the world of superheroes in a unique way.</p>
 		</div>
 	</header>
-	
+
 	<div id="content">
 		<div id="nav">
-		<h2> Menu </h2>
+			<h2>Menu</h2>
 
-			<button><a href="/superheroes">Superheroes</a></button>
-			<button><a href="/superpowers">Superpowers</a></button>
-			<button><a href="/location/location-menu">Locations</a></button>
-			<button><a href="/organisations">Organisations</a></button>
-			<button><a href="./sightings">Sightings</a></button>
+			<button>
+				<a href="/superheroes">Superheroes</a>
+			</button>
+			<button>
+				<a href="/superpowers">Superpowers</a>
+			</button>
+			<button>
+				<a href="/location/location-menu">Locations</a>
+			</button>
+			<button>
+				<a href="/organisations">Organisations</a>
+			</button>
+			<button>
+				<a href="./sightings">Sightings</a>
+			</button>
 
 		</div>
-		
+
 		<div id="sightings">
 			<table>
 				<caption>Ten Of The Latest Sightings!</caption>
@@ -129,11 +143,11 @@
 					<td th:text="${sighting.locationName}"></td>
 					<td th:text="${sighting.sightingDate}"></td>
 				</tr>
-				
+
 			</table>
 		</div>
 	</div>
-	
+
 </body>
 </html>
 
