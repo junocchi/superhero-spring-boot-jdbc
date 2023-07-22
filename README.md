@@ -5,6 +5,9 @@ A Superhero sightings web application, developed in five days as part of a four-
 
 <img height="1000" src="./src/images/example-superhero.png"> 
 
+## Group
+@catalina-kalman @DominiqueAMWalker @hodanhassan2408 and @junocchi
+
 ## Tech
 - Java Spring Boot with JDBC Template
 - HTML
