@@ -1,4 +1,4 @@
-# superhero-java
+# Superhero Project - Spring Boot REST with JDBCTemplate
 A Superhero sightings web application, developed in five days as part of a four-people group, during our Wiley Edge Trainee Program.
 
 <img height="200" src="./src/images/diagram.png"> 
@@ -15,7 +15,7 @@ A Superhero sightings web application, developed in five days as part of a four-
 - 1 database with 4 tables
 
 ## System functionalities
-With the rising popularity of superhero movies, there has been a heightened awareness of superheroes in our midst. The frequency of superhero (and supervillain) sightings is increasing at an alarming rate. Given this development, the Hero Education and Relationship Organisation (HERO) has asked our company to develop a database and data layer for their new superhero sightings web application.
+With the rising popularity of superhero movies, there has been a heightened awareness of superheroes in our midst. The frequency of superhero sightings is increasing at an alarming rate. Given this development, the Hero Education and Relationship Organisation (HERO) has asked our company to develop a database and data layer for their new superhero sightings web application.
 
 #### For our MVP we completed the following functionalities:
 
